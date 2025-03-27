@@ -40,8 +40,7 @@ CPU-scheduler-simulator/
 │   ├── cpu-scheduler.css   
 │   ├── explanation.css      
 │
-├── js/   
-       |--cpu-scheduler.js
+├── js/--cpu-scheduler.js
 ---
 
 ## Technologies Used
@@ -57,7 +56,7 @@ CPU-scheduler-simulator/
 ## Installation & Usage
 
 ### 1. Clone the Repository
-```bash
+bash
 git clone https://github.com/Babulal20073/CPU-scheduler-simulator.git
 cd CPU-scheduler-simulator
 2. Run Locally
