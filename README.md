@@ -41,7 +41,7 @@ CPU-scheduler-simulator/
 │   ├── explanation.css      
 │
 ├── js/   
-    |--cpu-scheduler.js
+       |--cpu-scheduler.js
 ---
 
 ## Technologies Used
