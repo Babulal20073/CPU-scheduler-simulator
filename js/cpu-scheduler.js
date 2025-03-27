@@ -526,7 +526,7 @@ $(document).ready(function () {
 					&& i != proccessIndex
 					&& processArray[i].hasStarted == false) {
 					// console.log("interupted by:"+processArray[i].processName);
-					processArray[proccessIndex].burstTime -= processArray[i].arrivalTime - position;
+					// processArray[proccessIndex].burstTime -= processArray[i].arrivalTime - position;
 					bar.addItem(processArray[proccessIndex].processName, processArray[i].arrivalTime - position);
 					processArray[proccessIndex].hasStarted = true;
 					interruptFound = true;
