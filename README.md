@@ -30,16 +30,15 @@ The **CPU Scheduler Simulator** is a web-based application designed to help user
 ## File Structure
 
 CPU-scheduler-simulator/
-│── index.html               # Main HTML file (UI structure)
-│── README.md                # Project Documentation
-│── LICENSE                  # License File
-│── .gitignore               # Git Ignore File
+│── index.html             
+│── README.md                  
+│── .gitignore              
 │
-├── css/                      # Styles and Themes
-│   ├── style.css             # General styles
-│   ├── bootstrap-simplex.css # Bootstrap theme (if used)
-│   ├── cpu-scheduler.css     # Styles specific to scheduling UI
-│   ├── explanation.css       # Styles for algorithm explanation section
+├── css/               
+│   ├── style.css         
+│   ├── bootstrap-simplex.css 
+│   ├── cpu-scheduler.css   
+│   ├── explanation.css      
 │
 ├── js/   
     |--cpu-scheduler.js
