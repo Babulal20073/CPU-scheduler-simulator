@@ -11,29 +11,119 @@
   <link rel="stylesheet" type="text/css" href="./css/bootstrap-simplex.css">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./css/explanation.css">
-
-  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Added Google Fonts link for Roboto -->
     
-
-/* Styling the fixed title bar */
-.title-bar {
-    width: 100%;
-    background: linear-gradient(135deg, #8f9aa5, #391175);
-    color: white;
-    padding: 20px 0;
+  <style>
+     .scheduler-box {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-top:30px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    font-family: 'Open Sans', sans-serif;
 }
 
-/* Push content down so it doesn't overlap with fixed header */
-main {
-    padding-top: 100px;
+.scheduler-box h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
 }
+
+select {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    font-size: 16px;
+    color: #333;
+    appearance: none;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+select:focus {
+    outline: none;
+    border: 2px solid #007BFF;
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+}
+
+.info-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.info-box p {
+    margin: 5px 0;
+}
+
+.scheduler-box select {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTggOEwxNiAwSDBMOCg4WiIgZmlsbD0iIzAwN0JGSiIvPjwvc3ZnPg==');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 8px;
+}
+
+.scheduler-box select:hover {
+    background-color: #f0f0f0;
+}
+
+.scheduler-box select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.scheduler-box select:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+.scheduler-box select option {
+    color: #333;
+}
+/* Styling the fixed title bar */
+/* Title bar styling */
+/* Title bar styling */
+.title-bar {
+            width: 100%;
+            background: linear-gradient(135deg, #f8f9fa, #e0e0e0); /* Light gradient background */
+            color: #333; /* Dark text color for contrast */
+            padding: 20px 0;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Light shadow */
+            transition: all 0.3s ease-in-out;
+            font-family: 'Poppins', sans-serif; /* Modern font */
+        }
+        /* Push content down so it doesn't overlap with fixed header */
+        main {
+            padding-top: 100px;
+        }
+
 /* Wrapper styling */
 .table-wrapper {
   max-width: 900px;
@@ -47,63 +137,86 @@ main {
 }
 
 /* Introductory section styling */
-.intro-section {
+/* Title bar styling */
+/* Title bar styling */
 
-  text-align: center; /* Centers inline and inline-block elements */
+
+/* Push content down so it doesn't overlap with fixed header */
+
+
+/* Wrapper styling */
+.table-wrapper {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Introductory section styling */
+.intro-section {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers child elements horizontally */
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
-  padding:20px;
-  background: linear-gradient(135deg, #bcd2d6, #6610f2);
-  color: white;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Open Sans', sans-serif;
 }
 
 .intro-section h2 {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: #16222A;
 }
 
 .intro-section p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   opacity: 0.9;
+  max-width: 600px;
+  line-height: 1.5;
+  color: #333;
 }
 
 /* Toggle button */
 #toggleTable {
-  margin-top: 15px;
-  padding: 10px 20px;
-  font-size: 16px;
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 18px;
   font-weight: 600;
   color: white;
-  background: linear-gradient(135deg, #28a745, #218838);
+  background: linear-gradient(135deg, #00b09b, #96c93d);
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 #toggleTable:hover {
-  background: linear-gradient(135deg, #218838, #1e7e34);
+  background: linear-gradient(135deg, #96c93d, #00b09b);
   transform: scale(1.05);
 }
 
 /* Horizontal divider */
 hr {
   border: none;
-  height: 2px;
-  background: linear-gradient(to right, #007bff, #6610f2);
-  margin: 20px auto;
+  height: 3px;
+  background: linear-gradient(to right, #11998e, #38ef7d);
+  margin: 30px auto;
   width: 80%;
   border-radius: 5px;
 }
-
 /* Styling for the content */
 .content {
     font-size: 1.2rem;
@@ -496,16 +609,67 @@ hr {
   </div>
 
 
-    <span style="font-size: large; color: rgb(3, 27, 94);">CPU Utilization:
-      <div id="utilization" style="color:rgb(129, 26, 255);"></div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 40vh; ">
+    <span style="font-size: large; color: rgb(3, 27, 94); display: block; margin-bottom: 20px; text-align: center;">CPU Utilization:
+      <div id="utilization" style="color: rgb(129, 26, 255); font-size: xx-large; font-weight: bold; margin-top: 10px;"></div>
     </span>
-    <span style="font-size: large; color: rgb(3, 27, 94);">Average waiting time:
-      <div id="avgwt" style="color:rgb(129, 26, 255);"></div>
+    <span style="font-size: large; color: rgb(3, 27, 94); display: block; margin-bottom: 20px; text-align: center;">Average waiting time:
+      <div id="avgwt" style="color: rgb(129, 26, 255); font-size: xx-large; font-weight: bold; margin-top: 10px;"></div>
     </span>
-    <span style="font-size: large; color: rgb(3, 27, 94); padding-bottom:50px;">Average turn around time:
-      <div id="avgtat" style="color:rgb(179, 26, 255);"></div>
+    <span style="font-size: large; color: rgb(3, 27, 94); display: block; padding-bottom: 50px; text-align: center;">Average turn around time:
+      <div id="avgtat" style="color: rgb(179, 26, 255); font-size: xx-large; font-weight: bold; margin-top: 10px;"></div>
     </span>
+  </div>
+    <div class="scheduler-box">
+      <h2>Select Scheduling Algorithm</h2>
+      <p>Select an algorithm to see a short description, advantages, and disadvantages.</p>
+    
+      <select id="algorithm" onchange="showInfo()">
+          <option value="">-- Select Algorithm --</option>
+          <option value="FCFS">First Come First Serve (FCFS)</option>
+          <option value="SJF">Shortest Job First (SJF)</option>
+          <option value="RR">Round Robin (RR)</option>
+          <option value="Priority">Priority Scheduling</option>
+      </select>
+      <div class="info-box" id="info" style="display: none;"></div>
+  </div>
 
+  <script>
+      function showInfo() {
+          const algo = document.getElementById("algorithm").value;
+          const infoBox = document.getElementById("info");
+          let info = "";
+
+          if (algo === "FCFS") {
+              info = `<h3>First Come First Serve (FCFS)</h3>
+                      <p><strong>Description:</strong> Processes are executed in the order they arrive.</p>
+                      <p><strong>Advantages:</strong> Simple and easy to implement.</p>
+                      <p><strong>Disadvantages:</strong> Can cause long waiting times for larger processes.</p>`;
+          } else if (algo === "SJF") {
+              info = `<h3>Shortest Job First (SJF)</h3>
+                      <p><strong>Description:</strong> Processes with the shortest execution time are executed first.</p>
+                      <p><strong>Advantages:</strong> Reduces average waiting time.</p>
+                      <p><strong>Disadvantages:</strong> Can cause starvation for longer processes.</p>`;
+          } else if (algo === "RR") {
+              info = `<h3>Round Robin (RR)</h3>
+                      <p><strong>Description:</strong> Each process is assigned a fixed time slice and executed in a circular order.</p>
+                      <p><strong>Advantages:</strong> Fair scheduling and avoids starvation.</p>
+                      <p><strong>Disadvantages:</strong> Can cause higher turnaround time if time slice is too small.</p>`;
+          } else if (algo === "Priority") {
+              info = `<h3>Priority Scheduling</h3>
+                      <p><strong>Description:</strong> Processes are executed based on priority levels.</p>
+                      <p><strong>Advantages:</strong> Critical processes are executed first.</p>
+                      <p><strong>Disadvantages:</strong> Can cause starvation for lower-priority processes.</p>`;
+          }
+
+          if (info) {
+              infoBox.innerHTML = info;
+              infoBox.style.display = "block";
+          } else {
+              infoBox.style.display = "none";
+          }
+      }
+  </script>
 
   </div><!-- /containter -->
 
