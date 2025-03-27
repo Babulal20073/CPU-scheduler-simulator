@@ -1,4 +1,3 @@
-# CPU-scheduler-simulator
 # CPU Scheduler Simulator
 
 ## Overview
